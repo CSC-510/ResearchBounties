@@ -18,9 +18,27 @@ The following conditions apply when attempting a research bounty.
 ### Submitting
 
 To be considered for credit, you must submit your proposed solution as a pull request.
-Put your code in `unityid/bountyname`.
+For stand-alone bounties, put your code in `unityid/bountyname` and make a pull request to this repository. If the bounty is related to an issue in another repository, make a pull request for that repository.
 
 ### Bounties
 
 * **Star-Index**: (0.5 points) Create a service that can compute a metric called the `star-index`, which is like [h-index](https://en.wikipedia.org/wiki/H-index), but for stars on a developers's github repos. You can use the github api. Desired language: node.js
 
+
+##### Autogit
+
+Autogit is a tool for Sublime and Visual Studio that will commit a copy of edited text to a local git repo everytime a save is made. This allows 
+
+* **Upgrade autogit to VS 2015**: (0.5 point) Upgrade the source code to work with Visual Studio 2015. Must demonstrate still works in VS 2013 and VS 2015.
+
+* **Automatic Commit summary**: (0.5 point) For a given git commit, analysis the words in a commit and and create a short sentance summary of commit. See [Issue #9](https://github.com/chrisparnin/autogit/issues/9).
+
+* **autogit VS Window**: (1 point) View summary of autogit log in VS window. This requires working with Visual Studio Extensions. See [Issue](https://github.com/chrisparnin/autogit/issues/8)
+
+* **Support Sublime Text 3**: (2 points) In order to work with Sublime Text 3, the code must be ported from python 2 to work in python 3.
+
+##### PM
+
+PM is an chrome extension for adding reminders to websites.
+
+* **Investigate and fix adding issue**: (0.5 point) The remember the milk api token may need to be updated and retested: See [Issue #3](https://github.com/chrisparnin/pm/issues/5)
