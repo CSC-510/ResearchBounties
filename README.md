@@ -33,9 +33,9 @@ Autogit is a tool for Sublime and Visual Studio that will commit a copy of edite
 
 * **Automatic Commit summary**: (0.5 point) For a given git commit, analysis the words in a commit and and create a short sentance summary of commit. See [Issue #9](https://github.com/chrisparnin/autogit/issues/9).
 
-* **autogit VS Window**: (1 point) View summary of autogit log in VS window. This requires working with Visual Studio Extensions. See [Issue](https://github.com/chrisparnin/autogit/issues/8)
+* **autogit VS Window**: (1 point) View summary of autogit log in VS window. This requires working with Visual Studio Extensions. See [Issue #8](https://github.com/chrisparnin/autogit/issues/8)
 
-* **Support Sublime Text 3**: (2 points) In order to work with Sublime Text 3, the code must be ported from python 2 to work in python 3.
+* **Support Sublime Text 3**: (2 points) In order to work with Sublime Text 3, the code must be ported from python 2 to work in python 3. Dulwich finally has a python 3 version available. See [Issue #3](https://github.com/chrisparnin/autogit/issues/3)
 
 ##### PM
 
