@@ -8,8 +8,8 @@ The following conditions apply when attempting a research bounty.
 
 1. You must [sign up](http://tiny.cc/researchbountysignup) before attempting a bounty.
 2. After sign up, you have 3 weeks to submit your proposed solution.
-3. You must do a research bounty completely own your own.
-3. If you have a question about an bounty that you are working on, you must ask through create an issue.
+3. You must do a research bounty completely own your own, do not ask me how to implement it!
+3. If you have a question about an bounty that you are working on, you must ask by [creating an issue](https://github.com/CSC-510/ResearchBounties/issues/new).
 4. Do not propose your own bounty.
 5. Your code must use proper configuration management.
 6. Abuse of any of these rules may result in canceling of research bounty at any time.
