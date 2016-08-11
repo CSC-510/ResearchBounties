@@ -20,7 +20,7 @@ The following conditions apply when attempting a research bounty.
 To be considered for credit, you must submit your proposed solution as a pull request.
 Put your code in `unityid/bountyname`.
 
-### Bounties (1 point each)
+### Bounties
 
-* **Star-Index**: Create a service that can compute a metric called the `star-index`, which is like [h-index](https://en.wikipedia.org/wiki/H-index), but for stars on a developers's github repos. You can use the github api. Desired language: node.js
+* **Star-Index**: (0.5 points) Create a service that can compute a metric called the `star-index`, which is like [h-index](https://en.wikipedia.org/wiki/H-index), but for stars on a developers's github repos. You can use the github api. Desired language: node.js
 
