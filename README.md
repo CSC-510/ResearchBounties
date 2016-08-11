@@ -12,14 +12,15 @@ The following conditions apply when attempting a research bounty.
 3. If you have a question about an bounty that you are working on, you must ask by [creating an issue](https://github.com/CSC-510/ResearchBounties/issues/new).
 4. Do not propose your own bounty.
 5. Your code must use proper configuration management.
-6. Abuse of any of these rules may result in canceling of research bounty at any time.
+6. You may receive a maxium of 5 points from research bounties.
+7. Abuse of any of these rules may result in canceling of research bounty at any time.
 
 ### Submitting
 
 To be considered for credit, you must submit your proposed solution as a pull request.
 Put your code in `unityid/bountyname`.
 
-### Bounties
+### Bounties (1 point each)
 
 * **Star-Index**: Create a service that can compute a metric called the `star-index`, which is like [h-index](https://en.wikipedia.org/wiki/H-index), but for stars on a developers's github repos. You can use the github api. Desired language: node.js
 
