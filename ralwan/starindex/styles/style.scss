@@ -1,0 +1,55 @@
+@font-face{
+      font-family: "Open Sans Light";
+      src: url("../fonts/Open Sans/OpenSans-Light.ttf");
+}
+@font-face{
+      font-family: "Open Sans";
+      src: url("../fonts/Open Sans/OpenSans-Regular.ttf");
+}
+@font-face{
+      font-family: "League Gothic";
+      src: url("../fonts/League Gothic/LeagueGothic-Regular.otf");
+}
+
+$font-opensans: "Open Sans";
+$font-opensanslight: "Open Sans Light";
+$font-leaguegothic: "League Gothic";
+
+$color-grey-light: #ebebeb;
+$color-green-github: #6cc644;
+
+//Type your style inside the body block
+
+body{
+      font-family: $font-opensanslight;
+      .form-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            .input-container{
+                  margin-top: 50px;
+                  text-align: right;
+                  input{
+                        width: 500px;
+                        background-color: $color-grey-light;
+                        border-radius: 0px;
+                  }
+                  button{
+                        margin-top: 10px;
+                        width: 100px;
+                        border-radius: 0px;
+                        background-color: $color-green-github;
+                        border: 0px;
+                  }
+                  button:hover, button:focus{
+                        background-color: lighten($color-green-github, 10);
+                  }
+                  .output-container{
+                        margin-top: 50px;
+                        font-size: 30px;
+                  }
+            }
+      }
+}

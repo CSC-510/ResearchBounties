@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../fonts/Open Sans/OpenSans-Light.ttf"); }
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open Sans/OpenSans-Regular.ttf"); }
+@font-face {
+  font-family: "League Gothic";
+  src: url("../fonts/League Gothic/LeagueGothic-Regular.otf"); }
+body {
+  font-family: "Open Sans Light"; }
+  body .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; }
+    body .form-container .input-container {
+      margin-top: 50px;
+      text-align: right; }
+      body .form-container .input-container input {
+        width: 500px;
+        background-color: #ebebeb;
+        border-radius: 0px; }
+      body .form-container .input-container button {
+        margin-top: 10px;
+        width: 100px;
+        border-radius: 0px;
+        background-color: #6cc644;
+        border: 0px; }
+      body .form-container .input-container button:hover, body .form-container .input-container button:focus {
+        background-color: #8bd26b; }
+      body .form-container .input-container .output-container {
+        margin-top: 50px;
+        font-size: 30px; }
+
+/*# sourceMappingURL=style.css.map */
