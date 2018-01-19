@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            //alert(document.getElementById("rand").value);
+            $("button").click(function () {
+                $.ajax({
+                    url: "https://blooming-plains-41639.herokuapp.com/MyGitStarAPI", //MyGitStarAPI/",//"https://api.github.com/users/"+$('#rand').val()+"/repos",
+                    type: "GET",
+                    // dataType: "json", github-star-index.herokuapp.com
+                    // data: {id}
+                    data: { id: $('#rand').val() },
+                    success: function (response) {
+                        //alert(response.statusCode);
+                        if (response.status == 404) {
+                            alert("sdgdf");
+                            $("#index_output").html("No such user found.");
+                        }
+                        else {
+                            console.log("wesdf ",JSON.parse(JSON.stringify(response)));
+                            var starIndexObject = JSON.parse(JSON.stringify(response));//[0].name;
+                            //$("#output").html("Star Index : " + starIndexObject);
+                            myFunction(starIndexObject)
+
+                        }
+                    },
+                    error: function (response) {
+					$("#index_output").show();
+					$("#index").hide();
+					$("#myTable").hide();
+					//$("#index_output").attr('class','alert alert-danger');
+					
+                        $("#index_output").html("No such user found.");
+                    }
+                });
+            });
+        });
+
+        // var obj = JSON.parse('{"starIndex":4,"starIndexRepos":[{"repo_name":"anacrowd","repo_stars":4},{"repo_name":"attachables","repo_stars":21},{"repo_name":"autogit","repo_stars":72},{"repo_name":"autogit-st","repo_stars":4},{"repo_name":"automark","repo_stars":12},{"repo_name":"docsight","repo_stars":18}]}');
+        //document.getElementById("demo").innerHTML = obj.starIndex + ", " + obj.starIndexRepos[0].repo_name;
+        myFunction();
+		
+		function loadFun(){
+			document.getElementById('index_output').style.display= "none";
+			document.getElementById('index').style.display = 'none';
+			
+		}
+        function myFunction(starIndexObject) {
+            document.getElementById('index_output').innerHTML = "<h2><strong> Star Index : " + starIndexObject.starIndex + "</strong></h1>";
+            var obj = starIndexObject;
+            var table = document.getElementById("myTable");
+            var row, cell1, cell2;
+			var rowCount = table.rows.length;
+			document.getElementById('index_output').style.display = 'block';
+			document.getElementById('myTable').style.display = 'table';
+			document.getElementById('index').style.display = 'block';
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+            console.log("I write ",obj.starIndexRepos.length," is written here");
+            for (var i = 0; i < obj.starIndexRepos.length; i++) {
+                row = table.insertRow(1);
+				//row.style(class="success");
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell1.innerHTML = obj.starIndexRepos[i].repo_name;
+                cell2.innerHTML = obj.starIndexRepos[i].repo_stars;
+            }
+        }
+    </script>
+    <style>
+        table,
+        td, th {
+            border: 1px solid black;
+			padding: 3px;
+			table-layout: fixed;
+			word-wrap: break-word;
+			width: 50%;
+        }
+    </style>
+</head>
+
+<body onload=loadFun()>
+
+	<center>
+	<h2>Enter your exact github name in text box below</h2>
+	<br><br>
+    <input type="text" class="form-control " style="width:30%; position:relative" id="rand" placeholder="Github Username" />
+	<br><br>
+    <button id="button-container" type="button" class="btn btn-success">click here</button>
+	<br><br>
+    <div id="index_output" class="alert alert-info"  ></div>
+	<div id="repositories_output" style="width:50%;">
+	
+	<h3 id ="index" style="display: none">
+		Repositories Contributed to Star Index
+	</h3>
+	<table id="myTable" class="table table-striped" style="display: none; " align="center" >
+	<center>
+		<tr>
+			<th>
+				Repository Name
+			</th>
+			<th>
+				No of Stars
+			</th>
+		</tr>
+	</center>
+    </table>
+	</div>
+	</center>
+</body>
+
+</html>
